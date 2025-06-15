@@ -1,0 +1,260 @@
+/* Father's Day Website Styles */
+
+/* Base Styles and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #3498db;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #3498db;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Layout */
+header, section, footer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.image-card {
+    flex: 0 1 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.caption {
+    padding: 1rem;
+    background-color: white;
+    font-style: italic;
+}
+
+/* Sports Inspiration Section */
+.sports-inspiration {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+}
+
+.sports-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.sport-card {
+    flex: 1 1 400px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Promise Section */
+.promise {
+    background-color: #e8f4f8;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+}
+
+.promise-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Thank You Section */
+.thank-you {
+    text-align: center;
+}
+
+.gratitude-list {
+    list-style-position: inside;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: left;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.gratitude-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.gratitude-list li::before {
+    content: '❤';
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.signature {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .image-container {
+        gap: 1rem;
+    }
+    
+    .image-card {
+        flex: 0 1 100%;
+    }
+    
+    .sports-content {
+        flex-direction: column;
+    }
+    
+    header, section, footer {
+        padding: 1.5rem;
+    }
+}
+
+/* Animation for page elements */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.4s; }
+section:nth-child(4) { animation-delay: 0.6s; }
+section:nth-child(5) { animation-delay: 0.8s; }
+section:nth-child(6) { animation-delay: 1s; }
